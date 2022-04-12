@@ -1,0 +1,17 @@
+#header{
+  background: black;
+  color: red;
+}
+
+body{
+  background: black;
+  color: white;
+}
+
+a{
+  color: white;
+}
+
+a:hover {
+  color: hotpink;
+}
