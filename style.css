@@ -4,8 +4,7 @@
 }
 
 body{
-  background: black;
-  color: white;
+  background-image: url("photos/background.png");
 }
 
 a{
