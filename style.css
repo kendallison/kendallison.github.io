@@ -4,6 +4,7 @@
 
 body{
   background-image: url("photos/background.png");
+  background-size: 100%;
   color: white;
   font-size: 110%;
 
@@ -22,4 +23,35 @@ a:hover {
   color: hotpink;
   font-size: 50;
   font-size:206%;
+}
+
+.scroll-tracker {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 0.5rem;
+  background-color: blue;
+  transform-origin: left;
+}
+
+.butterflies {
+  position: relative;
+  top: -700px;
+  right: -350px;
+  pointer-events: none;
+
+
+}
+
+.butterflies2 {
+  position: relative;
+  transform: scaleX(-1);
+  top: -1500px;
+  right: 350px;
+  pointer-events: none;
+
+}
+
+.gang {
+  position: relative;
+  top: -1600px;
 }
