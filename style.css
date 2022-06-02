@@ -3,9 +3,8 @@
 }
 
 body{
-  background-image: url("photos/background.png");
-  background-size: 100%;
-  color: white;
+  background-color: black;
+  color: black;
   font-size: 110%;
 
 }
@@ -34,24 +33,55 @@ a:hover {
 }
 
 .butterflies {
+  width: auto;
   position: relative;
   top: -700px;
   right: -350px;
   pointer-events: none;
+  object-fit: cover;
+  overflow: visible;
 
 
 }
 
 .butterflies2 {
+  direction: rtl;
+  width: auto;
   position: relative;
   transform: scaleX(-1);
   top: -1500px;
   right: 350px;
   pointer-events: none;
+  object-fit: cover;
+  overflow: visible;
 
 }
 
 .gang {
   position: relative;
   top: -1600px;
+}
+
+.topHead {
+  direction: inherit;
+  width: 100%;
+  position: relative;
+  top: -2800px;
+  object-fit: cover;
+}
+
+.lip {
+  direction: inherit;
+  max-width: 100%;
+  position: relative;
+  top: -1750px;
+  object-fit: cover;
+
+}
+
+.tounge {
+  position: relative;
+  overflow: hidden;
+  top: -2000px;
+
 }

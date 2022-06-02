@@ -5,11 +5,23 @@ const scrollTracker = document.querySelector(".scroll-tracker");
 
 const animatedImages = document.querySelectorAll(".image-rotate-in");
 
-const scrollTime = new ScrollTimeline({
-  source: document.scrollingElement,
-  orientation: "block",
-  scrollOffsets: [CSS.percent(0), CSS.percent(100)]
-})
+const animatedLip = document.querySelector(".lip-down");
+
+const aniTounge = document.querySelector(".tounge-move");
+
+const animatedLipTime = new ScrollTimeline({
+  scorllOffsets: [
+    { target: animatedLip, edge: "end", threshold: "0" },
+    { target: animatedLip, edge: "start", threshold: "0" }
+  ],
+});
+
+const aniToungeTime = new ScrollTimeline({
+  scrollOffsetts: [
+    { target: aniTounge, edge: "end", threshold: "1" },
+    { target: aniTounge, edge: "start", threshold: "1" }
+  ],
+});
 
 animatedImages.forEach(image => {
   const animatedImageTime = new ScrollTimeline({
@@ -29,12 +41,22 @@ animatedImages.forEach(image => {
   );
 });
 
-scrollTracker.animate(
+animatedLip.animate(
   {
-    transform: ['scaleX(0)', 'scaleX(1)']
+    transform: ["translateY(-100px)", "translate(0)"],
   },
   {
     duration: 1,
-    timeline: scrollTime,
+    timeline: animatedLipTime,
+  }
+);
+
+aniTounge.animate(
+  {
+    transform: ["translateY(-800px)", "translate()"],
+  },
+  {
+    duration: 1,
+    timeline: animatedLipTime,
   }
 );
